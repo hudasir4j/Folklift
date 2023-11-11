@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pathway+Gothic+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&display=swap');
 a{
   text-decoration: none;
 }
@@ -23,6 +22,6 @@ code {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(350px, 10fr));
+  grid-template-columns: repeat(auto-fit,minmax(300px, 10fr));
   grid-gap: 1em;
 }

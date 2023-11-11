@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pathway+Gothic+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Libre+Baskerville:ital@0;1&family=Pathway+Gothic+One&display=swap');
 
 /* TITLE */
 
@@ -10,6 +9,7 @@
 
 .top-part h1{
     font-family: 'Abril Fatface',sans-serif;
+    font-weight: 400;
     max-width: 100%;
     min-width: 20%;
     padding: 0;

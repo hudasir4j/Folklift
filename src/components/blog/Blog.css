@@ -1,11 +1,11 @@
 .blog {
-    margin: 50px 0;
+    margin-top: 50px;
+    margin-left: auto;
+    width: 100%;
   }
   .blog .boxItems {
     width: 90%;
-    left: 0;
-    border-radius: 2em;
-    background: #B11F54;
+    background: #A4BEE5;
     padding: 1em;
     transition: 0.5s;
   }
@@ -18,16 +18,20 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 1em;
     margin-bottom: 20px;
   }
+
+
+
+
+
   .blog .icon {
     margin-right: 10px;
-    color: white;
+    color: #B11F54;
     font-size: 20px;
   }
   .blog .tag a {
-    color: white;
+    color: #B11F54;
     opacity: 0.7;
   }
   .blog .tag {
@@ -37,32 +41,29 @@
     
 
   }
-  .outlineTag{
-    width: auto;
-    border-radius: 20px;
-    padding: 10px;
-  }
 
   .blog h3 {
-    font-weight: 500;
-    font-family: 'Abril Fatface';
+    font-weight: 700;
+    font-family: 'Libre Baskerville', serif;
     margin: 0%;
     line-height: 100%;
+    color: #B11F54;
   }
 
   .blog .link{
-    color: #eda7c1;
+    color: #B11F54;
     font-size: 2em;
 
   }
   .blog p {
-    color: #eda7c1;
+    font-family: 'Libre Baskerville', serif;
+    color: #B11F54;
     font-weight: 400;
     margin: 20px 0;
     font-size: 17px;
   }
   .blog .date {
-    color: #eda7c1;
+    color: #B11F54;
     display: flex;
     align-items: center;
   }

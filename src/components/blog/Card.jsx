@@ -1,6 +1,6 @@
 import React from 'react'
 import './Blog.css'
-import { blog } from "../../assets/data/data"
+import { articles } from "../../assets/data/data"
 import {AiOutlineTags} from 'react-icons/ai'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { AiOutlineComment } from 'react-icons/ai'
@@ -13,7 +13,7 @@ const Card = () => {
     <>
       <section className='blog'>
         <div className='container grid3'>
-          {blog.map((item) => (
+          {articles.map((item) => (
             <div className='box boxItems' key={item.id}>
               <div className='img'>
                 <img src={item.cover} alt='' />
@@ -28,7 +28,7 @@ const Card = () => {
                 <Link to={`/details/${item.id}`} className='link'>
                   <h3>{item.title}</h3>
                 </Link>
-                <p>{item.desc.slice(0, 180)}...</p>
+                <p><i>{item.desc.slice(0, 180)}...</i></p>
                 <div className='date'>
                   <AiOutlineClockCircle className='icon' /> <label htmlFor=''>{item.date}</label>
                   <AiOutlineShareAlt className='icon' /> <label htmlFor=''>SHARE</label>

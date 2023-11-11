@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&display=swap');
+
+section{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+#smallBizzWeek{
+    border-left: 1px solid #B5CDF0;
+}
+
+#bizzOfWeekImg{
+    height: 100;
+}
+.BizzOfWeek .box{
+    /* border:1px solid #1e1e1e; */
+    align-content: center;
+    height: auto;
+    border-left: 1px solid #1e1e1e;
+    padding: 15%;
+    grid-gap: 1px;
+    font-family: 'Libre Baskerville', serif;
+}
+.BizzOfWeek .box{
+    text-align: center;
+}
+
+.BizzOfWeek .box button{
+    
+    font-family: 'Libre Baskerville',serif;
+    background-color: #4A5F7D;
+    padding: 5%;
+    color: white;
+    margin-top: 4%;
+    border: none;
+}
+
+.BizzOfWeek .box img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.BizzOfWeek .box h2{
+    font-size: 2em;
+    color:#B11F54;
+}
+
+.companyName{
+    color:#B11F54;
+}
+
+@media(max-width:833px){
+    .BizzOfWeek .box{
+        /* border:1px solid #1e1e1e; */
+        
+        border-left: 1px solid #1e1e1e;
+        padding: 10%;
+        grid-gap: 1px;
+        border-bottom: 1px solid #1e1e1e;
+    }
+    #bizzOfWeekImg{
+        align-items: center;
+        border: none;
+    }
+}
+
+@media(max-width:555px){
+    .box{
+        border-left: none;
+        align-items: center;
+    }
+}
