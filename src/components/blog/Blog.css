@@ -50,10 +50,27 @@
     color: #B11F54;
   }
 
+
   .blog .link{
     color: #B11F54;
     font-size: 2em;
 
+  }
+
+  .linkCopied{
+    font-family: 'Pathway Gothic One', sans-serif;
+    padding: 0% 10%;
+    margin-left: 5%;
+    border: none;
+    background-color: #b8cdec;
+  }
+
+  .linkCopied label{
+    margin-right: 0;
+  }
+
+  .urlMessage{
+    margin-left: 2%;
   }
   .blog p {
     font-family: 'Libre Baskerville', serif;
@@ -67,9 +84,11 @@
     display: flex;
     align-items: center;
   }
+  .blog .date .icon {
+    margin-right: 0%;
+  }
   .blog .date label {
     display: block;
-    margin-right: 20px;
   }
 
 

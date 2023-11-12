@@ -1,8 +1,6 @@
 import React from 'react'
 import BizzOfWeek from '../components/BizzOfWeek/BizzOfWeek'
 import transition from '../transition';
-import Category from '../components/Category/Category'
-import Card from '../components/blog/Card'
 import { Helmet } from 'react-helmet';
 
 export const Home = ()=>{

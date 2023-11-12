@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react"
 import "./Details.css"
 import { Helmet } from 'react-helmet';
 import "../../components/Header/Header.css"
-import { BsPencilSquare } from "react-icons/bs"
-import { AiOutlineDelete } from "react-icons/ai"
 import { useParams } from "react-router-dom"
 import { blog } from "../../assets/data/data"
 
@@ -18,10 +16,38 @@ export const Details = () => {
     }
   }, [id]);
 
-  // Check if blogs and blogs.desc exist before attempting to split
   const paragraphs = blogs?.desc ? (
     blogs.desc.split('\n').map((paragraph, index) => <p key={index}>{paragraph}</p>)
   ) : null;
+
+  const renderContactInfo = () => {
+    const contactMethods = blogs?.contact;
+
+    if (!contactMethods) {
+      return null;
+    }
+
+    return (
+      <div className="ContactInfo">
+        <div className="insideStuff">
+            <h3>Contact Information</h3>
+            <ul>
+              {Object.entries(contactMethods).map(([type, value], index) => (
+                <li key={index}>
+                  {type.charAt(0).toUpperCase() + type.slice(1)}: {type === 'website' || type==='facebook' ? (
+                    <a href={value} target="_blank" rel="noopener noreferrer">
+                      {value}
+                    </a>
+                  ) : (
+                    value
+                  )}
+                </li>
+              ))}
+            </ul>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <>
@@ -52,6 +78,7 @@ export const Details = () => {
               <hr />
               {/* Render paragraphs directly, no need for <p> tags */}
               {paragraphs}
+              {renderContactInfo()}
             </div>
           </div>
         </section>

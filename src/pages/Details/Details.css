@@ -7,6 +7,25 @@
   margin-top: 2%;
   margin-bottom:5%;
 }
+
+.ContactInfo{
+
+  text-align: center;
+  font-size: 150%;
+  background-color: #92aed8;
+  padding: 5%;
+  margin-bottom: 5%;
+}
+
+.ContactInfo h3{
+  font-family: 'Libre Baskerville'; 
+  font-weight: 400; 
+}
+
+.ContactInfo ul{
+  list-style: none;
+}
+
 .singlePage .writerInfo {
   font-family: 'Libre Baskerville', sans;
   font-size: 100%;
