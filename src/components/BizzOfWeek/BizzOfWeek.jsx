@@ -1,6 +1,7 @@
 import React from 'react'
 import './BizzOfWeek.css'
 import {bizzofweek} from '../../assets/data/data'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 
 
@@ -19,7 +20,10 @@ function BizzOfWeek() {
         <div className='box descriptionBox'>
           <h3 className='companyName'>{bizzofweek.at(0).title}</h3>
           <p>{bizzofweek.at(0).desc}</p>
-          <button>learn more</button>
+          <Link to={`/blog`} className='link'>
+              <button>learn more</button>
+          </Link>
+          
         </div>
         <div className='box' id='bizzOfWeekImg'>
           <img src={bizzofweek.at(0).cover} alt="image not found" />
