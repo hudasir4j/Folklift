@@ -125,7 +125,10 @@ export const nav = [
       founder: 'Ambreen',
       contact: {
         website: 'https://ambrehenna.com/',
-        facebook: 'https://www.facebook.com/nausheen.syed.501'
+        facebook: 'https://m.facebook.com/Ambre-henna-106748624851354/?ref=page_internal',
+        email: 'ambrehenna@gmail.com',
+        instagram: '@ambre_henna',
+
       },
     },
   ]  
