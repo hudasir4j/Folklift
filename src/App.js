@@ -9,19 +9,28 @@ import './App.css'
 import Header from './components/Header/Header';
 import Blog from './pages/Blog'
 import { Details } from './pages/Details/Details';
+import AboutUs from './pages/Details/About Us/AboutUs';
+import { AnimatePresence } from 'framer-motion';
+
 
 const App = () => {
   return <>
     
-    <Router>
-      <Header/>
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route exact path="/blog" component={Blog}></Route>
-        <Route exact path="/details/:id" component={Details}></Route>
-      </Switch>
-    </Router>
+    <AnimatePresence mode = "wait">
 
+      <Router>
+        <Header/>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/blog" component={Blog}></Route>
+          <Route exact path="/details/:id" component={Details}></Route>
+          <Route exact path="/about" component={AboutUs}></Route>
+        </Switch>
+      </Router>
+      
+
+    </AnimatePresence>
+    
   </>
 }
 

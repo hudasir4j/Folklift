@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&display=swap');
 
 section{
+    margin-bottom: 5%;
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
@@ -13,14 +14,19 @@ section{
 }
 
 #bizzOfWeekImg{
+    padding: 0;
+    padding-left: 5%;
     height: 100;
 }
 .BizzOfWeek .box{
     /* border:1px solid #1e1e1e; */
     align-content: center;
     height: auto;
+    width: 80%;
     border-left: 1px solid #1e1e1e;
-    padding: 15%;
+    margin-left: 8%;
+    padding-left:8%;
+    padding-top: 20%;
     grid-gap: 1px;
     font-family: 'Libre Baskerville', serif;
 }
@@ -29,7 +35,7 @@ section{
 }
 
 .BizzOfWeek .box button{
-    
+    margin-bottom: 5%;
     font-family: 'Libre Baskerville',serif;
     background-color: #4A5F7D;
     padding: 5%;
@@ -58,19 +64,55 @@ section{
         /* border:1px solid #1e1e1e; */
         
         border-left: 1px solid #1e1e1e;
-        padding: 10%;
+        margin: 0;
         grid-gap: 1px;
         border-bottom: 1px solid #1e1e1e;
     }
+
+    .BizzOfWeek .box{
+        padding-top: 0%;
+    }
+
+    #smallBizzWeek{
+        width: 100%;
+        padding: 0;
+        padding-top: 40%;
+    }
+
+    #smallBizzWeek h2{
+        width: 90%;    
+    }
+
     #bizzOfWeekImg{
+        margin-top: 15%;
+        margin-left: 50%;
         align-items: center;
         border: none;
     }
 }
 
 @media(max-width:555px){
+
+    #smallBizzWeek{
+        padding: 0%;
+    }
+    .box.descriptionBox{
+        margin: 0;
+        border-left: none;
+        width: 100%;
+        padding-left: 0%;
+    }
     .box{
+
         border-left: none;
         align-items: center;
     }
+
+    #bizzOfWeekImg{
+        margin-top: 15%;
+        margin-left: 0%;
+        align-items: center;
+        border: none;
+    }
+
 }

@@ -12,6 +12,12 @@ function Header() {
 
     return (
 
+
+        
+
+
+
+
         <header className='header'>
             <div className='main-div'>
                 <div className='top-part'>

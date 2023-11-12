@@ -1,5 +1,6 @@
 import React from 'react'
 import './BizzOfWeek.css'
+import {bizzofweek} from '../../assets/data/data'
 
 
 
@@ -9,22 +10,26 @@ function BizzOfWeek() {
 
   return (
     <div className='BizzOfWeek'>
+      
+
         <section>
-            <div className='box' id='smallBizzWeek'>
-              <h2>Small Business of the Week</h2>
-            </div>
-            
+        <div className='box' id='smallBizzWeek'>
+          <h2>Small Business of the Week</h2>
+        </div>
+        <div className='box descriptionBox'>
+          <h3 className='companyName'>{bizzofweek.at(0).title}</h3>
+          <p>{bizzofweek.at(0).desc}</p>
+          <button>learn more</button>
+        </div>
+        <div className='box' id='bizzOfWeekImg'>
+          <img src={bizzofweek.at(0).cover} alt="image not found" />
+        </div>
 
-            <div className='box'>
-              <h3 className='companyName'>Fustan</h3>
-              <p>Ambre Henna is a muslim-owned business where the founder, Ambre, creates intricate henna designs on clients from her Pakistani background. Henna can be great for all ocassions such as Eid or Diwali, or even for casual wear. Ambre makes her own products at home with a wide variety including henna sealant, henna cones, resin henna designs, and more. </p>
-            </div>
-            <div className='box' id='bizzOfWeekImg'>
-              <img src='' alt="image not found" />
-              <button>learn more</button>
-            </div>
+      </section>
 
-        </section>
+
+
+        
     </div>
   )
 }

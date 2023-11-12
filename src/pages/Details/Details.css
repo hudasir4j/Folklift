@@ -1,26 +1,55 @@
 .singlePage {
-  padding: 50px 0;
-  background: #fff;
+  margin-bottom:15%;
 }
-.singlePage .right {
-  margin-top: 30px;
+
+.containerDetails{
+  background: #A4BEE5;
+  margin-top: 2%;
+  margin-bottom:5%;
+}
+.singlePage .writerInfo {
+  font-family: 'Libre Baskerville', sans;
+  font-size: 100%;
+  text-transform: capitalize;
+  width: 90%;
+  margin-left:5%;
+  line-height: 50%;
+  text-align:right;
+  color:#B11F54;
+}
+.singlePage hr{
+  border: 0.5px solid #1E1E1E;
 }
 .singlePage img {
+  width: 90%;
   margin-left: 5%;
-  width: 100%;
   max-height: 20em;
   object-fit: cover;
-  border-radius: 10px;
 }
 .singlePage h1 {
+  font-family: 'Abril Fatface',sans-serif;
   font-size: 30px;
   font-weight: 500;
 }
 .singlePage p {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 100%;
   line-height: 2;
-  text-transform: capitalize;
+  font-family: "Libre Baskerville", sans;
+}
+
+.singlePage .left{
+  width:90%;
+  margin-left:5%;
+}
+.singlePage .left h3{
+  margin-top:0;
+}
+.singlePage .left h1{
+  color: #B11F54;
+  font-size: 400%;
+  margin-bottom:0;
+  margin-top:2%;
 }
 .singlePage .buttons {
   display: flex;
