@@ -10,12 +10,6 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 const Card = () => {
 
-  const [copySuccess, setCopySuccess] = useState("")
-  const textAreaRef = useRef(null)
-
-    async function copyToClip() {
-        await navigator.clipboard.writeText(location.href);
-    }
 
 
   return (
