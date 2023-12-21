@@ -1,34 +1,53 @@
+
 .singlePage {
   margin-bottom:15%;
 }
 
 .containerDetails{
+  width: 100%;
   background: #A4BEE5;
   margin-top: 2%;
   margin-bottom:5%;
 }
 
 .ContactInfo{
-
   text-align: center;
-  font-size: 150%;
+  font-size: 50%;
   background-color: #92aed8;
   padding: 5%;
   margin-bottom: 5%;
 }
 
-.ContactInfo h3{
+
+
+.ContactInfo h4{
   font-family: 'Libre Baskerville'; 
   font-weight: 400; 
+  margin: 0;
+  font-size: 4vw;
 }
 
 .ContactInfo ul{
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
   list-style: none;
 }
 
+.ContactInfo li{
+  
+  max-width: 100%;
+  font-size: 4vw;
+}
+
+.ContactInfo li a {
+  max-width: 50%;
+  font-size: 4vw;
+}
 .singlePage .writerInfo {
   font-family: 'Libre Baskerville', sans;
-  font-size: 100%;
+  font-size: 2vw;
   text-transform: capitalize;
   width: 90%;
   margin-left:5%;
@@ -47,9 +66,10 @@
 }
 .singlePage h1 {
   font-family: 'Abril Fatface',sans-serif;
-  font-size: 30px;
   font-weight: 500;
 }
+
+
 .singlePage p {
   margin: 20px 0;
   font-size: 100%;
@@ -57,16 +77,22 @@
   font-family: "Libre Baskerville", sans;
 }
 
+
+
 .singlePage .left{
   width:90%;
   margin-left:5%;
 }
 .singlePage .left h3{
+  margin: 0;
   margin-top:0;
+  font-weight: 400;
+  font-size: 4vw;
 }
 .singlePage .left h1{
   color: #B11F54;
-  font-size: 400%;
+  max-width: 100%;
+  font-size: 7vw;
   margin-bottom:0;
   margin-top:2%;
 }

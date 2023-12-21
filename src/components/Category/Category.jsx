@@ -61,11 +61,11 @@ const SampleNextArrow = (props) => {
                     {category.map((item) => (
                     <div className='boxs' key={item.id}>
                         <div className='box' >
-                        <img src={item.cover} alt={item.category} />
-                        <div className='overlay'>
+                          <img src={item.cover} alt={item.category} />
+                          <div className='overlay'>
                             <h4>{item.category}</h4>
                             <p>{item.title}</p>
-                        </div>
+                          </div>
                         </div>
                     </div>
                     ))}

@@ -1,12 +1,34 @@
+// Card.jsx
 import React, { useState } from "react";
 import "./Blog.css";
 import { articles } from "../../assets/data/data";
-import { AiOutlineTags } from "react-icons/ai";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import { AiOutlineShareAlt } from "react-icons/ai";
 
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { BsFillArrowLeftCircleFill } from "react-icons/bs";
+
+import Slider from "react-slick";
+import ArticleCard from "../blog/ArticleCard"; // Adjust the path based on your project structure
+
+const SampleNextArrow = (props) => {
+  const { onClick } = props
+  return (
+    <div className='control-btn' onClick={onClick}>
+      <button className='next'>
+        <BsFillArrowRightCircleFill className='icon' />
+      </button>
+    </div>
+  )
+}
+const SamplePrevArrow = (props) => {
+  const { onClick } = props
+  return (
+    <div className='control-btn' onClick={onClick}>
+      <button className='prev'>
+        <BsFillArrowLeftCircleFill className='icon' />
+      </button>
+    </div>
+  )
+}
 
 const Card = () => {
   const [copiedStates, setCopiedStates] = useState(Array(articles.length).fill(false));
@@ -22,42 +44,78 @@ const Card = () => {
     }, 10);
   };
 
+  // Create an array of unique categories
+  const uniqueCategories = [...new Set(articles.flatMap((article) => article.categories))];
+
+  // Slick slider settings
+  const sliderSettings = {
+    infinite: true,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplay: true,
+          autoplaySpeed: 4000
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4000
+        },
+      },
+    ],
+  }
+
   return (
     <>
       <section className="blog">
-        <div className="container grid3">
-          {articles.map((item, index) => (
-            <div className="box boxItems" key={item.id}>
-              <div className="img">
-                <img src={item.cover} alt="" />
+        <div className="container">
+          {/* Render sliders for each category */}
+          {uniqueCategories.map((category) => {
+            const uniqueArticlesForCategory = [];
+
+            return (
+              <div key={category} className="category-slider">
+                <h2>{category}</h2>
+                <hr/>
+                <Slider {...sliderSettings}>
+                  {articles
+                    .filter((article) => article.categories.includes(category))
+                    .map((item) => {
+                      // Check if this article is already rendered in another category
+                      if (!uniqueArticlesForCategory.some((a) => a.id === item.id)) {
+                        uniqueArticlesForCategory.push(item);
+
+                        return (
+                          <ArticleCard
+                            key={item.id}
+                            article={item}
+                            isCopied={copiedStates[uniqueArticlesForCategory.length - 1]}
+                            onCopy={() => handleClick(uniqueArticlesForCategory.length - 1)}
+                          />
+                        );
+                      }
+                      return null; // Skip rendering if article ID is already in the set
+                    })}
+                </Slider>
+                <hr/>
               </div>
-              <div className="details">
-                <div className="tag">
-                  <div className="outlineTag">
-                    <AiOutlineTags className="icon" />
-                    <a href="/">#{item.category}</a>
-                  </div>
-                </div>
-                <Link to={`/details/${item.id}`} className="link">
-                  <h3>{item.title}</h3>
-                </Link>
-                <p>
-                  <i>{item.desc.slice(0, 180)}...</i>
-                </p>
-                {copiedStates[index] && (
-                  <span className="urlMessage">URL copied to clipboard!</span>
-                )}
-                <div className="date">
-                  <AiOutlineClockCircle className="icon" /> <label htmlFor="">{item.date}</label>
-                  <CopyToClipboard text={`folklift.netlify.app/details/${item.id}`}>
-                    <button className="linkCopied" onClick={() => handleClick(index)}>
-                      <AiOutlineShareAlt className="icon" /> <label htmlFor="">SHARE</label>
-                    </button>
-                  </CopyToClipboard>
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
     </>

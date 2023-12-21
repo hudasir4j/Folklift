@@ -30,7 +30,7 @@ export const Details = () => {
     return (
       <div className="ContactInfo">
         <div className="insideStuff">
-            <h3>Contact Information</h3>
+            <h4>Contact Information</h4>
             <ul>
               {Object.entries(contactMethods).map(([type, value], index) => (
                 <li key={index}>
@@ -69,6 +69,7 @@ export const Details = () => {
             <div className="writerInfo">
               <h3>{blogs.author}</h3>
               <h3>{blogs.date}</h3>
+              <h3>{blogs.location}</h3>
             </div>
             <img src={blogs.cover} alt="" />
             <div className="left">
