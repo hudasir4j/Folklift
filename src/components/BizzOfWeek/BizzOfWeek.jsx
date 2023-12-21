@@ -19,7 +19,7 @@ function BizzOfWeek() {
         </div>
         <div className='box descriptionBox'>
           <h3 className='companyName'>{bizzofweek.at(0).title}</h3>
-          <p>{bizzofweek.at(0).desc}</p>
+          <p>{bizzofweek.at(0).desc.slice(0, 180)}...</p>
           <Link to={`/blog`} className='link'>
               <button>learn more</button>
           </Link>
