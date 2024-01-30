@@ -1,7 +1,6 @@
-// Card.jsx
 import React, { useState } from "react";
 import "./Blog.css";
-import { articles } from "../../assets/data/data";
+import { texts } from "../../assets/data/data";
 
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
@@ -9,29 +8,31 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import Slider from "react-slick";
 import ArticleCard from "../blog/ArticleCard"; // Adjust the path based on your project structure
 
-const SampleNextArrow = (props) => {
-  const { onClick } = props
-  return (
-    <div className='control-btn' onClick={onClick}>
-      <button className='next'>
-        <BsFillArrowRightCircleFill className='icon' />
-      </button>
-    </div>
-  )
-}
-const SamplePrevArrow = (props) => {
-  const { onClick } = props
-  return (
-    <div className='control-btn' onClick={onClick}>
-      <button className='prev'>
-        <BsFillArrowLeftCircleFill className='icon' />
-      </button>
-    </div>
-  )
-}
+import StoryCardSrc from './StoryCardSrc';
 
-const Card = () => {
-  const [copiedStates, setCopiedStates] = useState(Array(articles.length).fill(false));
+const SampleNextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="control-btn" onClick={onClick}>
+      <button className="next">
+        <BsFillArrowRightCircleFill className="icon" />
+      </button>
+    </div>
+  );
+};
+const SamplePrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="control-btn" onClick={onClick}>
+      <button className="prev">
+        <BsFillArrowLeftCircleFill className="icon" />
+      </button>
+    </div>
+  );
+};
+
+const StoryCard = () => {
+  const [copiedStates, setCopiedStates] = useState(Array(texts.length).fill(false));
 
   const handleClick = (index) => {
     const newCopiedStates = [...copiedStates];
@@ -45,7 +46,7 @@ const Card = () => {
   };
 
   // Create an array of unique categories
-  const uniqueCategories = [...new Set(articles.flatMap((article) => article.categories))];
+  const uniqueCategories = [...new Set(texts.flatMap((text) => text.categories))];
 
   // Slick slider settings
   const sliderSettings = {
@@ -65,7 +66,7 @@ const Card = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           autoplay: true,
-          autoplaySpeed: 4000
+          autoplaySpeed: 4000,
         },
       },
       {
@@ -74,11 +75,11 @@ const Card = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 4000
+          autoplaySpeed: 4000,
         },
       },
     ],
-  }
+  };
 
   return (
     <>
@@ -86,33 +87,33 @@ const Card = () => {
         <div className="container">
           {/* Render sliders for each category */}
           {uniqueCategories.map((category) => {
-            const uniqueArticlesForCategory = [];
+            const uniqueTextsForCategory = [];
 
             return (
               <div key={category} className="category-slider">
                 <h2>{category}</h2>
-                <hr/>
+                <hr />
                 <Slider {...sliderSettings}>
-                  {articles
-                    .filter((article) => article.categories.includes(category))
+                  {texts
+                    .filter((text) => text.categories.includes(category))
                     .map((item) => {
-                      // Check if this article is already rendered in another category
-                      if (!uniqueArticlesForCategory.some((a) => a.id === item.id)) {
-                        uniqueArticlesForCategory.push(item);
+                      // Check if this text is already rendered in another category
+                      if (!uniqueTextsForCategory.some((a) => a.id === item.id)) {
+                        uniqueTextsForCategory.push(item);
 
                         return (
-                        <ArticleCard
+                          <StoryCardSrc
                             key={item.id}
                             article={item}
-                            isCopied={copiedStates[uniqueArticlesForCategory.length - 1]}
-                            onCopy={() => handleClick(uniqueArticlesForCategory.length - 1)}
+                            isCopied={copiedStates[uniqueTextsForCategory.length - 1]}
+                            onCopy={() => handleClick(uniqueTextsForCategory.length - 1)}
                           />
                         );
                       }
-                      return null; // Skip rendering if article ID is already in the set
+                      return null; // Skip rendering if text ID is already in the set
                     })}
                 </Slider>
-                <hr/>
+                <hr />
               </div>
             );
           })}
@@ -122,4 +123,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default StoryCard;

@@ -27,7 +27,7 @@
 .blog .box {
   position: relative;
   width: calc(100% - 2em); /* Adjust the width considering the total margin (2em) */
-  height: 42em;
+  height: 38em;
   background: #A4BEE5;
   padding: 1em;
   transition: 0.5s;
@@ -79,7 +79,7 @@
 
 @media (max-width:600px) {
   .blog .box{
-    height: 32em;
+    height: 33em;
   }
 }
 
