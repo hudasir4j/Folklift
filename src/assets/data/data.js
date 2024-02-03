@@ -158,7 +158,7 @@ export const nav = [
     },
     {
       id: 2,
-      title: "Preformative Activism",
+      title: "I Don't Feel Forced To Post",
       desc: "High school Junior Huda Siraj addresses the performative activism in modern day involving the Palestinian Genocide, expressing dissent for 'bandwagons' and 'preformative activists' in a public statement.",
       categories: ["Gaza"],
       cover: '../images/stories/gaza/ps2.jpeg',
@@ -171,6 +171,14 @@ export const nav = [
       categories: ["Gaza"],
       cover: '../images/stories/gaza/ps3.jpeg',
       date: "October 24th, 2023",
+    },
+    {
+      id: 4,
+      title: "Feminists And Woke People, Where Are You Now?",
+      desc: "16-year-old Huda Siraj writes about the double standard in society. White feminism, performative activism.",
+      categories: ["Gaza"],
+      cover: '../images/stories/gaza/ps4.jpeg',
+      date: "February 1st, 2024",
     },
   ]
 
@@ -187,7 +195,7 @@ export const nav = [
     },
     {
       id: 2,
-      title: "PERFORMATIVE ACTIVISM",
+      title: "I DO NOT FEEL FORCED TO POST",
       author: "Huda Siraj",
       desc: "as a muslim, i am exposed to the details of the palestinian genocide daily. in my involvement, i am knowledgable in this topic and can speak about it and want to speak about it. however, i know many people don’t have the privilege to be exposed to this so often. non-muslims – never feel forced to post about this conflict. you don’t need to repost the instagram posts that everyone has been lately, especially if you haven’t even read it. personally,\ni do not feel 'forced' to post about this genocide when i see footage of a dad holding plastic bags of his children’s body parts because he never got to say goodbye and wants something to remember them by (The Gaurdian).\ni do not feel 'forced' to post about this genocide when i hear that over 19,000 - 37,000 pregnant women  are at risk of life-threatening complications in Gaza (Al Jazeera & IPPF).\ni do not feel 'forced' to post about this genocide when i hear old Gaza civilians who can’t walk or stand up properly having to walk twenty-five miles just to have a mere chance to survive. 'israeli' helicopters dropping papers telling citizens to go South (Al Jazeera, PBS, & Washington Post).\nhowever, i understand why people may feel uncomfortable with posting about this situation. nobody is asking you to post. in fact, don’t. if you are afraid of the backlash, afraid of the people’s negative reactions to your story, don’t post. but NEVER pretend to be an avid and outspoken supporter of Palestine.  if some backlash is making you step away from posting, do NOT bother to post or claim you are a supporter. you’re not woke, you’re not an activist. you’re not a supporter, you are a bandwagon follower.\nin a perfect world, everyone would be boycotting starbucks. but obviously, we don’t live in a perfect world. you can drink starbucks if you would like. personally, i don’t like to drink blood money. but if you want to drink watered-down, overpriced beverages that support the killing of innocent people, go ahead!",
       category: "Gaza",
@@ -206,6 +214,20 @@ export const nav = [
       founder: 'Amrin Khalil',
       contact: {
         instagram: '@amrinkhalilpoetry'
+      }
+    },
+    {
+      id: 4,
+      title: "FEMINISTS AND WOKE PEOPLE, WHERE ARE YOU NOW?",
+      author: "Huda Siraj",
+      desc: "'Feminism,' but it only applies when a millionaire American woman doesn't get another prize.\n'Feminism,' but not when women in Gaza risk their lives and those of their children. Every. Single. Day.\n'Woke,' but it only apples when a stadium boo's a billionaire pop star.\n'Woke,' but not when the world boo's innocent civilians wanting safety, security, and support.\n Stop preformative activism.",
+      category: "Gaza",
+      cover: '../images/stories/gaza/ps4.jpeg',
+      date: "FEBRUARY 1ST, 2024",
+      founder: 'Huda Siraj',
+      contact: {
+        instagram: '@hudasraj',
+        LinkedIn: 'https://www.linkedin.com/in/hudasiraj/'
       }
     }
   ]

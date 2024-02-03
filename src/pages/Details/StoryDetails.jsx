@@ -33,7 +33,7 @@ export const StoryDetails = () => {
             <ul>
               {Object.entries(contactMethods).map(([type, value], index) => (
                 <li key={index}>
-                  {type.charAt(0).toUpperCase() + type.slice(1)}: {type === 'website' || type==='facebook' ? (
+                  {type.charAt(0).toUpperCase() + type.slice(1)}: {type === 'website' || type==='facebook' || type =='LinkedIn'? (
                     <a href={value} target="_blank" rel="noopener noreferrer">
                       {value}
                     </a>
