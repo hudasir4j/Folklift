@@ -141,9 +141,9 @@ export const nav = [
   export const bizzofweek =[
     {
       id:2,
-      title: "Matchmaking by Nausheen",
-      desc: "In a world where meaningful connections are often lost in the fast pace of life, Nausheen's journey through a personal challenge led to the creation of a unique matchmaking business. Five years ago, inspired by a neighbor's suggestion and driven by the desire to foster genuine connections, Nausheen began matchmaking on platforms like WhatsApp.\n Initially, encounters were casual, with individuals seeking companionship more as a pastime than a serious commitment. Recognizing the need for deeper, more meaningful connections, Nausheen transitioned from a personal endeavor to a full-fledged business. She started conducting interviews with both parents and potential matches, introducing like-minded individuals with the intention of fostering marriages.\n What sets Nausheen's matchmaking business apart is its commitment to sincerity and genuine connections. Nausheen exclusively works with individuals and families who are earnest about marriage within a timeframe of six months to one year. With an average of 20 successful couples per year, the business has grown from a social cause to a professional service, extending its reach nationally.\n Operating as a paid service, Nausheen's matchmaking venture not only brings people together for lifelong companionship but also stands as a testament to her dedication to transforming a personal challenge into a business that facilitates meaningful connections. In a world where the pace of life often hinders the pursuit of genuine relationships, Nausheen's business strives to create lasting unions with a purpose beyond profit.",
-      cover: '../images/blog/matchmakingnausheen.jpeg',
+      title: "This is Not War",
+      desc: "Doctor and Poet Amrin Khalil's 'This is Not War' is a testament to the pain and suffering of the Palestinians, reminding us that this Genocide is simply not a War for the lasting impacts on one side have long outweighed any action they might have done.",
+      cover: '../images/stories/gaza/ps3.jpeg',
     }
   ]
 

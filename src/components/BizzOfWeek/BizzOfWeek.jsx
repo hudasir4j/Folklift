@@ -15,12 +15,12 @@ function BizzOfWeek() {
 
         <section>
         <div className='box' id='smallBizzWeek'>
-          <h2>Small Business of the Week</h2>
+          <h2>Piece of the Week</h2>
         </div>
         <div className='box descriptionBox'>
           <h3 className='companyName'>{bizzofweek.at(0).title}</h3>
           <p>{bizzofweek.at(0).desc.slice(0, 180)}...</p>
-          <Link to={`/blog`} className='link'>
+          <Link to={`/stories`} className='link'>
               <button>learn more</button>
           </Link>
           
