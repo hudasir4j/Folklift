@@ -180,6 +180,14 @@ export const nav = [
       cover: '../images/stories/gaza/ps4.jpeg',
       date: "February 1st, 2024",
     },
+    {
+      id: 5,
+      title: "People Like Us Who Care",
+      desc: "California Freshman Jositha writes about activism and Palestine, and the struggle to be outspoken at these times",
+      categories: ["Gaza"],
+      cover: '../images/stories/gaza/ps5.jpeg',
+      date: "March 2nd, 2024",
+    },
   ]
 
   export const textdetails = [
@@ -229,5 +237,41 @@ export const nav = [
         instagram: '@hudasraj',
         LinkedIn: 'https://www.linkedin.com/in/hudasiraj/'
       }
+    },
+    {
+      id: 5,
+      title: "People Like Us Who Care",
+      author: "Jositha",
+      desc: "Behind hidden curtains, thousands dead.\nWomen\nChildren\nBabies who can't even speak.\nMercilessly murdered by the Israeli government through their attacks on the innocent.\nThen, we didn't know.\nNow, as all eyes are on Gaza, what will you do?\nWhen you know the problem at hand.\nIf you step back, do you really care?\nIf you have the means, why not help?\nAnything makes a difference.\nA word\nA song\nA dance\nA poem.\nThe world needs the help of the people like us who care\nBecause if we don't, who will?",
+      category: "Gaza",
+      cover: '../images/stories/gaza/ps5.jpeg',
+      date: "MARCH 2ND, 2024",
+      founder: 'Huda Siraj',
     }
   ]
+
+
+  export const testimonialsData = [
+    {
+      title: "Brought out my Personal Story!",
+      name: "Nausheen Syed - Founder & Matchmaker",
+      description: "The writing style is so on point... I just had one conversation with you- this is superb!",
+      stars: 5,
+      image: "../images/blog/NausheenSyed.jpg", // Ensure this path is correct
+    },
+    {
+      title: "Brought out my Personal Story!",
+      name: "Malick Noor - Founder & Designer @ Fustan",
+      description: "The writing style is so on point... I just had one conversation with you- this is superb!",
+      stars: 5,
+      image: "../images/blog/MalickNoor.JPG", // Ensure this path is correct
+    },
+    {
+      title: "Wonderful Experience",
+      name: "Jane Doe",
+      description: "This was one of the most amazing experiences of my life. Highly recommend!",
+      stars: 5,
+      image: "../images/stories/gaza/ps4.jpeg", // Ensure this path is correct
+    },
+  ];
+  

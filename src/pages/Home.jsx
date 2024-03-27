@@ -1,5 +1,6 @@
 import React from 'react'
 import BizzOfWeek from '../components/BizzOfWeek/BizzOfWeek'
+import Testimonials from '../components/testimonial/Testimonials';
 import transition from '../transition';
 import { Helmet } from 'react-helmet';
 
@@ -13,7 +14,8 @@ export const Home = ()=>{
                 <link rel="link" href="/" />
             </Helmet>
 
-            <BizzOfWeek {...BizzOfWeek}/>
+            <BizzOfWeek {...BizzOfWeek} style="border-bottom:#eee solid 2px;"/>
+            <Testimonials/>
         </>
     )
 }

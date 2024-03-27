@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&display=swap');
+
+.Testimonials {
+    border-top: #1e1e1e solid 1px;
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.testimonialCard {
+    overflow: hidden;
+    width: 250px;
+
+}
+
+.testimonialImage img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px auto 0;
+    display: block;
+    border:#A4BEE5 solid 5px;
+}
+
+.testimonialContent {
+    margin-top: -40px;
+    background-color: #A4BEE5;
+    padding: 30px;
+    text-align: center;
+}
+
+.testimonialTitle {
+    color: #B11F54;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.testimonialName {
+    font-size: 1em;
+    font-style: italic;
+    color: #333;
+}
+
+.testimonialDesc {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: #B11F54;
+    font-size: 0.9em;
+}

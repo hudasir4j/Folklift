@@ -52,7 +52,7 @@
 }
 
 .top-part hr{
-
+    margin-bottom: 0;
     width: 90%;
     border: .5px solid #1E1E1E;
 }
