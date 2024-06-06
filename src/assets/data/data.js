@@ -141,13 +141,22 @@ export const nav = [
   export const bizzofweek =[
     {
       id:2,
-      title: "This is Not War",
-      desc: "Doctor and Poet Amrin Khalil's 'This is Not War' is a testament to the pain and suffering of the Palestinians, reminding us that this Genocide is simply not a War for the lasting impacts on one side have long outweighed any action they might have done.",
-      cover: '../images/stories/gaza/ps3.jpeg',
+      title: "Inside a washing machine world, we tremble.",
+      desc: "Indian high schooler Sophia Phaugat crafts a strong analogy between a washing machine and the female experience in India.",
+      cover: '../images/stories/feminism/fm1.jpeg',
     }
   ]
 
   export const texts = [
+
+    {
+      id: 6,
+      title: "Inside a washing machine world, we tremble.",
+      desc: "Indian high schooler Sophia Phaugat crafts a strong analogy between a washing machine and the female experience in India.",
+      categories: ["Womanhood"],
+      cover: '../images/stories/feminism/fm1.jpeg',
+      date: "June 6th, 2024",
+    },
     {
       id: 1,
       title: "Apex Predator",
@@ -176,7 +185,7 @@ export const nav = [
       id: 4,
       title: "Feminists And Woke People, Where Are You Now?",
       desc: "16-year-old Huda Siraj writes about the double standard in society. White feminism, performative activism.",
-      categories: ["Gaza"],
+      categories: ["Gaza","Womanhood"],
       cover: '../images/stories/gaza/ps4.jpeg',
       date: "February 1st, 2024",
     },
@@ -188,6 +197,7 @@ export const nav = [
       cover: '../images/stories/gaza/ps5.jpeg',
       date: "March 2nd, 2024",
     },
+
   ]
 
   export const textdetails = [
@@ -247,6 +257,16 @@ export const nav = [
       cover: '../images/stories/gaza/ps5.jpeg',
       date: "MARCH 2ND, 2024",
       founder: 'Huda Siraj',
+    },
+    {
+      id: 6,
+      title: "Inside a washing machine world, we tremble.",
+      author: "Sophia Phaugat",
+      desc: "Inside a washing machine world, we tremble.\n\nI often worry about my clothes when they are in the washing machine.\nOnce, I sat squatting in front of the soapy round window\nTo take a peek inside the washing machine world\nThat I have to send my clothes to, every week.\n\nMy mother looks at me the same,\nWith more frown lines and less intrigue,\nWhen she sends me outside each day.\n\nOne laundry day, I decided to take my jacket for washing myself.\nAfter all, my mother, too, insists on dropping me herself, wherever she can.\n\nThe fabric drowned it so gently,\nLulled by the quiet gush of murky gray.\nIt lay on top of the washing machine water,\nAbove all the other clothes.\n\nAnd then I just turned on the washing machine timer,\nShifting the knob ever so slightly,\nAnd when I looked to the water again,\nThe jacket was nowhere to be seen.\nIt had been taken under.\n\nA similar shock and fear appears\nIn my mother’s heart\nWhen she does not know my whereabouts;\nOr see me in her line of sight,\nWith her own two eyes.\n\nThat is how muted,\nSoft and corporeal\nMy drowning is.\n\nI talk to my sisters,\nThe women in my world,\nAnd they all tell me\n“Women sink to the bottom of the pile,\nStripped of everything.”\nThat’s just the way it is.\n\nThe places we perceive as safe,\nWhere we go for a certain purpose -\nBe it school, the market or god forbid, the club -\nAre all murky with gray,\nFestering with prey.\nPiercing eyes that leak terror into the air,\nHands that cannot keep to themselves\nAnd minds that roam much farther than they should;\nNo boundaries can be seen in the murky gray waters\nOf the washing machine world,\nThat we wade through each day.\n\nStreetlights, helplines, groups and covered skin,\nThey do not protect us anymore than\nWashing my clothes inside out will.\nIn hot water, clothes bleed out color regardless.\n\nI live in a country that’s ranked\n128th, out of 177,\nOn the women’s peace and security index.\nI live in a world that tells me to get up,\nWhen I’ve been tossed around haphazardly -\nBy hands I do not know and mouths I do not like -\nExpecting me to start anew;\nLike a cloth fresh out of the washing machine.",
+      category: "Womanhood",
+      cover: '../images/stories/feminism/fm1.jpeg',
+      date: "JUNE 6TH, 2024",
+      founder: 'Huda Siraj',
     }
   ]
 
@@ -262,16 +282,9 @@ export const nav = [
     {
       title: "Brought out my Personal Story!",
       name: "Malick Noor - Founder & Designer @ Fustan",
-      description: "The writing style is so on point... I just had one conversation with you- this is superb!",
+      description: "Our story's narration at Folklift has been amazing. They really helped convey our business' foundations.",
       stars: 5,
       image: "../images/blog/MalickNoor.JPG", // Ensure this path is correct
-    },
-    {
-      title: "Wonderful Experience",
-      name: "Jane Doe",
-      description: "This was one of the most amazing experiences of my life. Highly recommend!",
-      stars: 5,
-      image: "../images/stories/gaza/ps4.jpeg", // Ensure this path is correct
     },
   ];
   

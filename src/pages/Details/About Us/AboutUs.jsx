@@ -24,10 +24,8 @@ const AboutUs = () => {
             <div className="contact">
                 <i><h2>Contact Us</h2>
                 <ul>
-                    <li><a href="mailto:contact.folklift@gmail.com" target='_blank'><FaEnvelope className='icon'/> contact.folklift@gmail.com</a></li>
-                    <li><a href=""><FaInstagram className='icon'/> @folkliftig</a></li>
-                    <li><a href=""><FaTiktok className='icon'/> @folkliftusa</a></li>
-                    <li><a href=""><FaFacebook/> @folkliftusa</a></li>
+                    <li><a href="mailto:contact@folklift.co" target='_blank'><FaEnvelope className='icon'/> contact@folklift.co</a></li>
+                    <li><a href="https://www.instagram.com/folkliftig/" target='_blank'><FaInstagram className='icon'/> @folkliftig</a></li>
                 </ul>
                 </i>
             </div>

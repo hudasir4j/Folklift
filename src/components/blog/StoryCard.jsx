@@ -6,8 +6,6 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 
 import Slider from "react-slick";
-import ArticleCard from "../blog/ArticleCard"; // Adjust the path based on your project structure
-
 import StoryCardSrc from './StoryCardSrc';
 
 const SampleNextArrow = (props) => {
@@ -20,6 +18,7 @@ const SampleNextArrow = (props) => {
     </div>
   );
 };
+
 const SamplePrevArrow = (props) => {
   const { onClick } = props;
   return (
@@ -48,37 +47,39 @@ const StoryCard = () => {
   // Create an array of unique categories
   const uniqueCategories = [...new Set(texts.flatMap((text) => text.categories))];
 
-  // Slick slider settings
-  const sliderSettings = {
-    infinite: true,
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    arrows: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          autoplay: true,
-          autoplaySpeed: 4000,
+  // Function to get slider settings based on the number of items
+  const getSliderSettings = (numItems) => {
+    return {
+      infinite: numItems > 3, // Disable infinite scrolling if less than 3 items
+      speed: 800,
+      slidesToShow: 3,
+      slidesToScroll: 2,
+      arrows: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 4000,
+          },
         },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 4000,
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+          },
         },
-      },
-    ],
+      ],
+    };
   };
 
   return (
@@ -89,29 +90,29 @@ const StoryCard = () => {
           {uniqueCategories.map((category) => {
             const uniqueTextsForCategory = [];
 
+            const filteredTexts = texts.filter((text) => text.categories.includes(category));
+
             return (
               <div key={category} className="category-slider">
                 <h2>{category}</h2>
                 <hr />
-                <Slider {...sliderSettings}>
-                  {texts
-                    .filter((text) => text.categories.includes(category))
-                    .map((item) => {
-                      // Check if this text is already rendered in another category
-                      if (!uniqueTextsForCategory.some((a) => a.id === item.id)) {
-                        uniqueTextsForCategory.push(item);
+                <Slider {...getSliderSettings(filteredTexts.length)}>
+                  {filteredTexts.map((item) => {
+                    // Check if this text is already rendered in another category
+                    if (!uniqueTextsForCategory.some((a) => a.id === item.id)) {
+                      uniqueTextsForCategory.push(item);
 
-                        return (
-                          <StoryCardSrc
-                            key={item.id}
-                            article={item}
-                            isCopied={copiedStates[uniqueTextsForCategory.length - 1]}
-                            onCopy={() => handleClick(uniqueTextsForCategory.length - 1)}
-                          />
-                        );
-                      }
-                      return null; // Skip rendering if text ID is already in the set
-                    })}
+                      return (
+                        <StoryCardSrc
+                          key={item.id}
+                          article={item}
+                          isCopied={copiedStates[uniqueTextsForCategory.length - 1]}
+                          onCopy={() => handleClick(uniqueTextsForCategory.length - 1)}
+                        />
+                      );
+                    }
+                    return null; // Skip rendering if text ID is already in the set
+                  })}
                 </Slider>
                 <hr />
               </div>
