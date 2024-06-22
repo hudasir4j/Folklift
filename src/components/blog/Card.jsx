@@ -94,7 +94,7 @@ const Card = () => {
               <div key={category} className="category-slider">
                 <h2>{category}</h2>
                 <hr/>
-                <Slider {...sliderSettings}>
+                <Slider {...getSliderSettings}>
                   {articles
                     .filter((article) => article.categories.includes(category))
                     .map((item) => {
