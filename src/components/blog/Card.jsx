@@ -7,28 +7,29 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 
 import Slider from "react-slick";
-import ArticleCard from "../blog/ArticleCard"; // Adjust the path based on your project structure
+import ArticleCard from "../blog/ArticleCard";
 
 const SampleNextArrow = (props) => {
-  const { onClick } = props
+  const { onClick } = props;
   return (
     <div className='control-btn' onClick={onClick}>
       <button className='next'>
         <BsFillArrowRightCircleFill className='icon' />
       </button>
     </div>
-  )
-}
+  );
+};
+
 const SamplePrevArrow = (props) => {
-  const { onClick } = props
+  const { onClick } = props;
   return (
     <div className='control-btn' onClick={onClick}>
       <button className='prev'>
         <BsFillArrowLeftCircleFill className='icon' />
       </button>
     </div>
-  )
-}
+  );
+};
 
 const Card = () => {
   const [copiedStates, setCopiedStates] = useState(Array(articles.length).fill(false));
@@ -44,43 +45,40 @@ const Card = () => {
     }, 10);
   };
 
-  // Create an array of unique categories
   const uniqueCategories = [...new Set(articles.flatMap((article) => article.categories))];
 
   // Slick slider settings
-  const getSliderSettings = (numItems) => {
-    return{
-      infinite: numItems > 3, // Disable infinite scrolling if less than 3 items
-      speed: 800,
-      slidesToShow: 3,
-      slidesToScroll: 2,
-      arrows: true,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      responsive: [
-        {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            autoplay: true,
-            autoplaySpeed: 4000
-          },
+  const getSliderSettings = (numItems) => ({
+    infinite: numItems > 3,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplay: true,
+          autoplaySpeed: 4000,
         },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 4000
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4000,
         },
       },
     ],
-  };
-};
+  });
 
   return (
     <>
@@ -90,31 +88,30 @@ const Card = () => {
           {uniqueCategories.map((category) => {
             const uniqueArticlesForCategory = [];
 
+            const filteredArticles = articles.filter((article) => article.categories.includes(category));
+
             return (
               <div key={category} className="category-slider">
                 <h2>{category}</h2>
-                <hr/>
-                <Slider {...getSliderSettings}>
-                  {articles
-                    .filter((article) => article.categories.includes(category))
-                    .map((item) => {
-                      // Check if this article is already rendered in another category
-                      if (!uniqueArticlesForCategory.some((a) => a.id === item.id)) {
-                        uniqueArticlesForCategory.push(item);
+                <hr />
+                <Slider {...getSliderSettings(filteredArticles.length)}>
+                  {filteredArticles.map((item) => {
+                    if (!uniqueArticlesForCategory.some((a) => a.id === item.id)) {
+                      uniqueArticlesForCategory.push(item);
 
-                        return (
+                      return (
                         <ArticleCard
-                            key={item.id}
-                            article={item}
-                            isCopied={copiedStates[uniqueArticlesForCategory.length - 1]}
-                            onCopy={() => handleClick(uniqueArticlesForCategory.length - 1)}
-                          />
-                        );
-                      }
-                      return null; // Skip rendering if article ID is already in the set
-                    })}
+                          key={item.id}
+                          article={item}
+                          isCopied={copiedStates[uniqueArticlesForCategory.length - 1]}
+                          onCopy={() => handleClick(uniqueArticlesForCategory.length - 1)}
+                        />
+                      );
+                    }
+                    return null; // Skip rendering if article ID is already in the set
+                  })}
                 </Slider>
-                <hr/>
+                <hr />
               </div>
             );
           })}
