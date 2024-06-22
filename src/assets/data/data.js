@@ -84,6 +84,14 @@ export const nav = [
       cover: '../images/blog/ambrehenna.jpeg',
       date: "November 10th, 2023",
     },
+    {
+      id: 4,
+      title: "NeeaaN Candles",
+      desc: "A soulful story of an Indian-based candle store that started from humble beginnings to later bloom into a place of comfort, warmth, and creative expression.",
+      categories: ["Indian-Owned","Female-Owned", "Global"],
+      cover: '../images/blog/neeaanCandles.jpeg',
+      date: "June 11th, 2024",
+    },
 
   
   ]
