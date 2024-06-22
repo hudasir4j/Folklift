@@ -48,39 +48,37 @@ const StoryCard = () => {
   const uniqueCategories = [...new Set(texts.flatMap((text) => text.categories))];
 
   // Function to get slider settings based on the number of items
-  const getSliderSettings = (numItems) => {
-    return {
-      infinite: numItems > 3, // Disable infinite scrolling if less than 3 items
-      speed: 800,
-      slidesToShow: 3,
-      slidesToScroll: 2,
-      arrows: true,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      responsive: [
-        {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            autoplay: true,
-            autoplaySpeed: 4000,
-          },
+  const getSliderSettings = (numItems) => ({
+    infinite: numItems > 3, // Disable infinite scrolling if less than 3 items
+    speed: 800,
+    slidesToShow: Math.min(numItems, 3), // Show the number of items or 3, whichever is smaller
+    slidesToScroll: Math.min(numItems, 2), // Scroll the number of items or 2, whichever is smaller
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: Math.min(numItems, 2), // Show the number of items or 2, whichever is smaller
+          slidesToScroll: Math.min(numItems, 2), // Scroll the number of items or 2, whichever is smaller
+          autoplay: true,
+          autoplaySpeed: 4000,
         },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 4000,
-          },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: Math.min(numItems, 1), // Show the number of items or 1, whichever is smaller
+          slidesToScroll: Math.min(numItems, 1), // Scroll the number of items or 1, whichever is smaller
+          autoplay: true,
+          autoplaySpeed: 4000,
         },
-      ],
-    };
-  };
+      },
+    ],
+  });
 
   return (
     <>
