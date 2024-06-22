@@ -144,6 +144,25 @@ export const nav = [
 
       },
     },
+    {
+      id: 4,
+      title: "NEEAAN CANDLES",
+      location:'New Dehli, India',
+      author: "Sophia Phaugat",
+      desc: "A soulful story of an Indian-based candle store that started from humble beginnings to later bloom into a place of comfort, warmth, and creative expression.",
+      category: "Crafts",
+      cover: '../images/blog/neeaanCandles.jpeg',
+      date: "June 11, 2024",
+      founder: 'Muskaan and Aarti',
+      contact: {
+        website: 'https://neeaancandles.com/',
+        facebook: 'https://m.facebook.com/Ambre-henna-106748624851354/?ref=page_internal',
+        email: 'neeaancandles@gmail.com',
+        instagram: '@neeaancandles',
+        phoneNumber: '(+91 8800235023)'
+
+      },
+    },
   ]  
 
   export const bizzofweek =[
