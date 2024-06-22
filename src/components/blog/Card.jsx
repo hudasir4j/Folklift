@@ -49,7 +49,7 @@ const Card = () => {
 
   // Slick slider settings
   const sliderSettings = {
-    infinite: true,
+    infinite: numItems > 3, // Disable infinite scrolling if less than 3 items
     speed: 800,
     slidesToShow: 3,
     slidesToScroll: 2,
