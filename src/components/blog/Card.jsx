@@ -94,8 +94,10 @@ const Card = () => {
               <div key={category} className="category-slider">
                 <h2>{category}</h2>
                 <hr/>
-                <Slider {...getSliderSettings(filteredTexts.length)}>
-                  {filteredTexts.map((item) => {
+                <Slider {...sliderSettings}>
+                  {articles
+                    .filter((article) => article.categories.includes(category))
+                    .map((item) => {
                       // Check if this article is already rendered in another category
                       if (!uniqueArticlesForCategory.some((a) => a.id === item.id)) {
                         uniqueArticlesForCategory.push(item);
