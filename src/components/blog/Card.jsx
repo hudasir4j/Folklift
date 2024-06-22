@@ -48,37 +48,39 @@ const Card = () => {
   const uniqueCategories = [...new Set(articles.flatMap((article) => article.categories))];
 
   // Slick slider settings
-  const sliderSettings = {
-    infinite: numItems > 3, // Disable infinite scrolling if less than 3 items
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    arrows: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          autoplay: true,
-          autoplaySpeed: 4000
+  const sliderSettings = (numItems) => {
+    return{
+      infinite: numItems > 3, // Disable infinite scrolling if less than 3 items
+      speed: 800,
+      slidesToShow: 3,
+      slidesToScroll: 2,
+      arrows: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 4000
+          },
         },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 4000
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000
         },
       },
     ],
-  }
+  };
+};
 
   return (
     <>
