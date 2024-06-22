@@ -48,7 +48,7 @@ const Card = () => {
   const uniqueCategories = [...new Set(articles.flatMap((article) => article.categories))];
 
   // Slick slider settings
-  const sliderSettings = (numItems) => {
+  const getSliderSettings = (numItems) => {
     return{
       infinite: numItems > 3, // Disable infinite scrolling if less than 3 items
       speed: 800,
@@ -94,10 +94,8 @@ const Card = () => {
               <div key={category} className="category-slider">
                 <h2>{category}</h2>
                 <hr/>
-                <Slider {...sliderSettings}>
-                  {articles
-                    .filter((article) => article.categories.includes(category))
-                    .map((item) => {
+                <Slider {...getSliderSettings(filteredTexts.length)}>
+                  {filteredTexts.map((item) => {
                       // Check if this article is already rendered in another category
                       if (!uniqueArticlesForCategory.some((a) => a.id === item.id)) {
                         uniqueArticlesForCategory.push(item);
