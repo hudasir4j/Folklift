@@ -179,7 +179,7 @@ export const nav = [
       id: 7,
       title: "Nikki Haley: The “Whitewashed” Brown Girl Final Boss",
       desc: "17-year-old journalist Huda reflects on the common process of 'whitewashing' as seen in Nikki Haley's public persona.",
-      categories: ["Womanhood," "South Asian"],
+      categories: ["Womanhood", "South Asian"],
       cover: '../images/stories/feminism/fm2.jpeg',
       date: "July 15th, 2024",
     },
