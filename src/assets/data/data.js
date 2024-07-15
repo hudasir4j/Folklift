@@ -301,7 +301,7 @@ export const nav = [
       cover: '../images/stories/feminism/fm1.jpeg',
       date: "JUNE 6TH, 2024",
       founder: 'Huda Siraj',
-    }
+    },
     {
       id: 7,
       title: "Nikki Haley: The “Whitewashed” Brown Girl Final Boss",
