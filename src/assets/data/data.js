@@ -180,7 +180,7 @@ export const nav = [
       title: "Nikki Haley: The “Whitewashed” Brown Girl Final Boss",
       desc: "17-year-old journalist Huda reflects on the common process of 'whitewashing' as seen in Nikki Haley's public persona.",
       categories: ["Womanhood", "South Asian"],
-      cover: '../images/stories/feminism/fm2.jpeg',
+      cover: '../images/stories/feminism/fm2.jpg',
       date: "July 15th, 2024",
     },
     {
@@ -306,9 +306,9 @@ export const nav = [
       id: 7,
       title: "Nikki Haley: The “Whitewashed” Brown Girl Final Boss",
       author: "Huda Siraj",
-      desc: "I was born a chatty Indian girl in UAE, but later moved to the states in 2012, when I was five. I suppose I hadn’t fully developed an accent at the time given my age, but I found myself speaking differently from my white peers regardless. Pronouncing “water” as “vater” at times (which really embarrassed me into oblivion), or actually pronouncing the ‘l’ in “salmon” and wondering why people would laugh at me. /nThe sad fact is that there are many Nimrata Randhawa’s in the world that want to change their “salmon’s” to “sa-mon’s” and hide away their “Randhawa” identities only to conceal them with “Hayley.” /nThis term — “whitewashed” — has always been confusing to me. White people never told me to speak any different. They laughed, corrected me, and held different perceptions of me, but it was me that annunciated the ‘w’ in “water” desperate to fit in. Moreover, was the way white people spoke a cleanser? Was my Indian-ish accent something that needed to be washed? Why wasn’t it “white-tainted” or “white-soiled?” (Although, I guess nobody says “tainted” or “soiled”). /nHayley is actually one of the first televised “white-washed” brown women, but they exist everywhere. I guess it’s a phase all brown women must adopt before they move on to love their cultures that are built upon centuries of ancestors’ lives. /nWe all pray for the day she metamorphosizes into treating immigrants much like her own parents with the respect and support they deserve and accepts that she is, in truth, a Randhawa at the end of the day.",
+      desc: "I was born a chatty Indian girl in UAE, but later moved to the states in 2012, when I was five. I suppose I hadn’t fully developed an accent at the time given my age, but I found myself speaking differently from my white peers regardless. Pronouncing “water” as “vater” at times (which really embarrassed me into oblivion), or actually pronouncing the ‘l’ in “salmon” and wondering why people would laugh at me. \nThe sad fact is that there are many Nimrata Randhawa’s in the world that want to change their “salmon’s” to “sa-mon’s” and hide away their “Randhawa” identities only to conceal them with “Hayley.”\nThis term — “whitewashed” — has always been confusing to me. White people never told me to speak any different. They laughed, corrected me, and held different perceptions of me, but it was me that annunciated the ‘w’ in “water” desperate to fit in. Moreover, was the way white people spoke a cleanser? Was my Indian-ish accent something that needed to be washed? Why wasn’t it “white-tainted” or “white-soiled?” (Although, I guess nobody says “tainted” or “soiled”).\nHayley is actually one of the first televised “white-washed” brown women, but they exist everywhere. I guess it’s a phase all brown women must adopt before they move on to love their cultures that are built upon centuries of ancestors’ lives.\nWe all pray for the day she metamorphosizes into treating immigrants much like her own parents with the respect and support they deserve and accepts that she is, in truth, a Randhawa at the end of the day.",
       category: "Womanhood, South Asian",
-      cover: '../images/stories/feminism/fm2.jpeg',
+      cover: '../images/stories/feminism/fm2.jpg',
       date: "JULY 15TH, 2024",
       founder: 'Huda Siraj',
     }
