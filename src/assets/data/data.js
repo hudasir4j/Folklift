@@ -149,7 +149,7 @@ export const nav = [
       title: "NEEAAN CANDLES",
       location:'New Dehli, India',
       author: "Sophia Phaugat",
-      desc: "A soulful story of an Indian-based candle store that started from humble beginnings to later bloom into a place of comfort, warmth, and creative expression.",
+      desc: "In the same kitchen where their food was prepared, Arti’s candle making business flickered into existence. With the help of her family, she started this illuminating project in 2019 as a hobby, and it helped her a long way during the pandemic years when her husband’s food joint shut down.\nThey are now a women-run business based in New Delhi, India. With a founder who cradles a fiery passion for her work and independence, this small business has expanded its reach  and now delivers globally. “The fact that as of this moment I have a team of 6-7 ladies who make my brand, keeping them busy and giving them a job really keeps me going.”, she shares with Folklift.\n Molten mixtures of candle wax and love, these hand poured candles evoke a cozy warmth when lit. Ambient, enchanting, delicately crafted, amongst their wide range of products, you are sure to find something that wins your heart over! Brightening the world, one flicker at a time, the NeeaaN candles team take great pride in customizing candles as well.\nWe hope a whiff of their work reaches you, and you get to experience the magic compressed in their candles! Make sure to check out their aesthetically astounding products on their site.",
       category: "Crafts",
       cover: '../images/blog/neeaanCandles.jpeg',
       date: "June 11, 2024",
