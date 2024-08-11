@@ -92,8 +92,14 @@ export const nav = [
       cover: '../images/blog/neeaanCandles.jpeg',
       date: "June 11th, 2024",
     },
-
-  
+    {
+      id: 5,
+      title: "Buzzing Futures: The Bee Fund",
+      desc: "A visionary initiative sparked by Isha Sudhir’s journey in the nonprofit world, the Bee Fund started as a way to empower young founders to turn their ideas into impactful projects. Drawing from her success with the Lotus Project, Isha created the Bee Fund to break down barriers and provide essential support to youth-led nonprofits, helping the next generation of leaders make a lasting difference.",
+      categories: ["Indian-Owned","Female-Owned"],
+      cover: '../images/blog/beeFund.jpeg',
+      date: "August 11th, 2024",
+    },
   ]
 
   export const blog = [
@@ -163,14 +169,28 @@ export const nav = [
 
       },
     },
+    {
+      id: 5,
+      title: "Buzzing Opportunities: The Bee Fund",
+      location:'Seattle, Washington',
+      author: "Huda Siraj",
+      desc: "High school students and undergraduate students often found their own nonprofits for various causes. Whether it's a club spreading awareness about a specific condition, or an organization providing resources to young girls in technology.\nWhile starting these organizations are free, they often times require funding to create an ambitious and tangible impact on the world. The Bee Fund provides just that.\n[h2]Passing The Torch: What Is The Bee Fund?[/h2]\nIsha Sudhir, the founder and Seattle resident, had her fair share of experience in the non-profit space. Previously, she founded the Lotus Project, which was a blood cancer research focused fundraising campaign. Sudhir & her team's efforts allowed them to raise nearly $20,000 in 14 weeks.\nThis experience was formative in her founding of the Bee Fund. She was 'moved by [her and her team's] ability, as the youth, to create such a lasting impact on the lives of many,' Sudhir recollects. Seeing the impact that her team's non-profit work had on others, Sudhir sought to bring similar opportunities and circumstances to others and grow such impacts. 'I founded the Bee Fund with the sole purpose to reduce the barrier to enter the no-profit space,' she states.\nIn a process that is discussed later in this article, judges select non-profits through an application. They provide funding, newsletter exposure, media collaborations, and network opportunities to young founders of non-profits if selected.\n[h2]Isha Sudhir & Entrepreneurship[/h2]\nSudhir is a female founder and has faced many struggles in her journey, despite her overall success. 'Coming from a background in IT work, I had generally been sitting at all male tables,' Sudhir recalls. 'This shift in perspective has been largely beneficial for me.'\nIsha offers advice to young female founders such as herself, especially urging them to join accelerator programs like the Bee Fund which could support them and connect them to a larger community of young entrepreneurs. When developing an initiative, Sudhir's biggest suggestion is for young founders to '[establish] a strong team that holds innovation and inclusion at the forefront of their values,' which can overall prevent workspace discrimination from occurring.\n[h2]What Does The Process Look Like?[/h2]\nAs a large organization, the Bee Fund runs on a team of judges called the 'Board of Judges,' who are 'businesspeople, non-profit chairs, researchers, and industry professionals.' On a monthly basis, these judges meet to hold a vote on project submissions. The submission portal, which will be available to the public on July 28, 2024, is where non-profit owners can submit their applications for them to be reviewed.\nIs the Bee Fund looking for anything specific? 'No, we fund everything from the spark of an idea to a fully-fledged large non-profits. We will give [the initiatives] the tools to scale or fund [their] ideas.' The only strict requirement that the Bee Fund enforces is that the project/non-profit must be youth-led. This includes high school students, as well as undergraduates.\nTo learn more about the Bee Fund, please visit the official website.",
+      category: "Social",
+      cover: '../images/blog/beeFund.jpeg',
+      date: "August 11, 2024",
+      founder: 'Isha Sudhir',
+      contact: {
+        website: 'the-bee-fund.com'
+      },
+    },
   ]  
 
   export const bizzofweek =[
     {
-      id:2,
-      title: "Inside a washing machine world, we tremble.",
+      id:5,
+      title: "Buzzing Opportunities: The Bee Fund",
       desc: "Indian high schooler Sophia Phaugat crafts a strong analogy between a washing machine and the female experience in India.",
-      cover: '../images/stories/feminism/fm1.jpeg',
+      cover: '../images/blog/beeFund.jpeg',
     }
   ]
 
